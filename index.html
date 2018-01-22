@@ -11,11 +11,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/add.css" />
+		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
-
 		<!-- Header -->
 			<section id="header">
 				<div class="inner">
@@ -40,17 +42,25 @@
 							<header class="major">
 								<h2>Who Am I</h2>
 							</header>
-							<p>I am a Software Engineer based in New York City.  My passion for software and problem solving begun during my first engineering project while working on building a robot for people with disabilities called a roboWaiter.  While I had enjoyed this project and numerous other projects in college, the thing that really brought my attention was the power of software to bring these projects to fruition.
+							<p>Going into college, I knew for certain I wanted to use mathematical concepts in an applicable environment.   Electrical Engineering allowed me to do just that.  I was immersed in rigorous problems from my first one, building a robot to serve food, to my last one which was an eye gazing tracking device used to help people with limited mobility to use a computer.
+							</p>
+							<p>
+								During this time, I grew more and more fond of the software aspect of my projects.  Eventually I decided to go full deep into software, learning Ruby, Rails, PostgresSQL, JavaScript and React.
+							</p>
+							<p>
+								I love the power of software and the rich problem solving aspect of it.  I am nowhere near done and would love to continue expanding my knowledge of these languages and learn additional languages and frameworks.
 							</p>
 						</div>
 						<div class="6u$ 12u$(medium) important(medium)">
 							<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
 							<div>
 								<div>
-									<h2>Contact</h2>
-									<div><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a>/lmauricio12@gmail.com</div>
-									<div><a href="https://www.linkedin.com/in/luismauriciouyaguari" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a>/luismauriciouyaguari</div>
-									<div><a href="https://github.com/MauricioUyaguari" class="icon alt fa-github"><span class="label">GitHub</span></a>/MauricioUyaguari</div>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<div><a href="mailto:lmauricio12@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span>/lmauricio12@gmail.com</a></div>
+									<div><a href="https://www.linkedin.com/in/luismauriciouyaguari" class="icon fa-linkedin-square"><span class="label">Linkedin</span>/luismauriciouyaguari</a></div>
+									<div><a href="https://github.com/MauricioUyaguari" class="icon alt fa-github"><span class="label">GitHub</span>/MauricioUyaguari</a></div>
 									<br  />
 									<div><a href="#" class="button special">Resume</a></div>
 								</div>
@@ -61,32 +71,12 @@
 				</div>
 			</section>
 
-		<!-- Two -->
-			<section id="two" class="main style2">
-				<div class="container">
-					<div class="row 150%">
-						<div class="6u$ 12u$(medium)">
-							<header class="major">
-								<h2>Skills</h2>
-							</header>
-						</div>
-						<div class="6u 12u$(medium)">
-							<ul class="major-icons">
-								<li><span class="icon style1 major fa-code"></span></li>
-								<li><span class="icon style2 major fa-bolt"></span></li>
-								<li><span class="icon style3 major fa-camera-retro"></span></li>
-								<li><span class="icon style4 major fa-cog"></span></li>
-								<li><span class="icon style5 major fa-desktop"></span></li>
-								<li><span class="icon style6 major fa-calendar"></span></li>
-							</ul>
-						</div>
 
-					</div>
-				</div>
-			</section>
+
+
 
 		<!-- Three -->
-			<section id="three" class="main style1 special">
+			<section id="three" class="main style2 special">
 				<div class="container">
 					<header class="major">
 						<h2>My Projects</h2>
@@ -104,12 +94,12 @@
 							</ul>
 						</div>
 						<div class="4u 12u$(medium)">
-							<span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
+							<span class="image fit"><img src="images/splitit.png" alt="" /></span>
 							<h3>SplitIt</h3>
 							<p>SplitIt is a single page application letting you share bills with friends. Built with Rails, PostgreSQL on the backend and uses React and Redux for the frontend.
 							</p>
 							<ul class="actions">
-								<li><a href="#" class="button">Link</a></li>
+								<li><a href="https://splitit-mu.herokuapp.com/#/" class="button">Live</a></li>
 							</ul>
 						</div>
 						<div class="4u$ 12u$(medium)">
@@ -120,6 +110,72 @@
 							<ul class="actions">
 								<li><a href="#" class="button">Repo</a></li>
 							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- Two -->
+			<section id="two" class="main style3 special">
+				<div class="container">
+					<header class="major">
+						<h2>Skills</h2>
+					</header>
+					<div class="row 150%">
+						<div class="4u 12u$(medium)">
+							<span class="skills-icon"><i class="devicon-react-original colored"></i>
+								<h3 class="skills-descr"> <br/> <br/> React</h3>
+							</span>
+						</div>
+						<div class="4u 12u$(medium)">
+
+							<span class="skills-icon">
+								<svg class="redux" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+									<g fill="#764ABC">
+										<path d="M65.6 65.4c2.9-.3 5.1-2.8 5-5.8-.1-3-2.6-5.4-5.6-5.4h-.2c-3.1.1-5.5 2.7-5.4 5.8.1 1.5.7 2.8 1.6 3.7-3.4 6.7-8.6 11.6-16.4 15.7-5.3 2.8-10.8 3.8-16.3 3.1-4.5-.6-8-2.6-10.2-5.9-3.2-4.9-3.5-10.2-.8-15.5 1.9-3.8 4.9-6.6 6.8-8-.4-1.3-1-3.5-1.3-5.1-14.5 10.5-13 24.7-8.6 31.4 3.3 5 10 8.1 17.4 8.1 2 0 4-.2 6-.7 12.8-2.5 22.5-10.1 28-21.4z"></path>
+										<path d="M83.2 53c-7.6-8.9-18.8-13.8-31.6-13.8H50c-.9-1.8-2.8-3-4.9-3h-.2c-3.1.1-5.5 2.7-5.4 5.8.1 3 2.6 5.4 5.6 5.4h.2c2.2-.1 4.1-1.5 4.9-3.4H52c7.6 0 14.8 2.2 21.3 6.5 5 3.3 8.6 7.6 10.6 12.8 1.7 4.2 1.6 8.3-.2 11.8-2.8 5.3-7.5 8.2-13.7 8.2-4 0-7.8-1.2-9.8-2.1-1.1 1-3.1 2.6-4.5 3.6 4.3 2 8.7 3.1 12.9 3.1 9.6 0 16.7-5.3 19.4-10.6 2.9-5.8 2.7-15.8-4.8-24.3z"></path>
+										<path d="M32.4 67.1c.1 3 2.6 5.4 5.6 5.4h.2c3.1-.1 5.5-2.7 5.4-5.8-.1-3-2.6-5.4-5.6-5.4h-.2c-.2 0-.5 0-.7.1-4.1-6.8-5.8-14.2-5.2-22.2.4-6 2.4-11.2 5.9-15.5 2.9-3.7 8.5-5.5 12.3-5.6 10.6-.2 15.1 13 15.4 18.3 1.3.3 3.5 1 5 1.5-1.2-16.2-11.2-24.6-20.8-24.6-9 0-17.3 6.5-20.6 16.1-4.6 12.8-1.6 25.1 4 34.8-.5.7-.8 1.8-.7 2.9z"></path>
+									</g>
+								</svg>
+								<h3 class="skills-descr">  <br/> <br/> Redux</h3>
+							</span>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<span class="skills-icon"><i class="devicon-javascript-plain colored"></i>
+								<h3 class="skills-descr"> <br/> <br/>JavaScript</h3>
+							</span>
+						</div>
+						<div class="4u 12u$(medium)">
+							<span class="skills-icon"><i class="devicon-jquery-plain colored"></i>
+								<h3 class="skills-descr"> <br  /> <br />jQuery</h3>
+							</span>
+						</div>
+						<div class="4u 12u$(medium)">
+							<span class="skills-icon"><i class="devicon-ruby-plain colored"></i>
+								<h3 class="skills-descr"> <br /> <br />Ruby</h3>
+							</span>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<span class="skills-icon"><i class="devicon-rails-plain colored"></i>
+								<h3 class="skills-descr"><br /> <br />Rails</h3>
+							</span>
+						</div>
+						<div class="4u 12u$(medium)">
+							<span class="skills-icon"><i class="devicon-postgresql-plain colored"></i>
+								<h3 class="skills-descr"><br /> <br />PostgreSQL</h3>
+							</span>
+						</div>
+						<div class="4u 12u$(medium)">
+							<span class="skills-icon"><i class="devicon-html5-plain colored"></i>
+								<h3 class="skills-descr"><br /> <br />HTML5 + Canvas</h3>
+							</span>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<span class="skills-icon">
+								<i class="devicon-python-plain colored"></i>
+								<h3 class="skills-descr"><br /> <br />Python</h3>
+						</span>
 						</div>
 					</div>
 				</div>
@@ -182,7 +238,7 @@
 								</div>
 							</div>
 							<div class="6u$ 12u$(medium) important(medium)">
-								<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+								<span class="image fit"><img src="images/running.jpg" alt="" /></span>
 							</div>
 						</div>
 					</div>
@@ -190,7 +246,7 @@
 				</section>
 
 		<!-- Five -->
-		<!--
+
 			<! <section id="five" class="main style1">
 				<div class="container">
 					<header class="major special">
@@ -499,8 +555,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
 								<div class="4u"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
 								<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<!-- <div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div> -->
-							<!-- </div>
+								<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+							 </div>
 						</div>
 						<h5>Left &amp; Right</h5>
 						<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
@@ -508,18 +564,18 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</section>
 
 				</div>
-			</section> -->
+			</section>
 
 
-		<!-- Footer -->
+
 			<section id="footer">
 				<ul class="icons">
 					<!-- <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li> -->
 					<!-- <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li> -->
 					<li><a href="https://www.linkedin.com/in/luismauriciouyaguari" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
 					<li><a href="https://github.com/MauricioUyaguari" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon alt fa-angellist"><span class="label">AngelList</span></a></li>
-					<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://angel.co/mauriciouyaguari" class="icon alt fa-angellist"><span class="label">AngelList</span></a></li>
+					<li><a href="mailto:lmauricio12@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 				</ul>
 				<ul class="copyright">
 					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>

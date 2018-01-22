@@ -1,5 +1,16 @@
-.education  {
+.skills-icon  {
 
-  height: 30px;
-  width: 30px;
+  font-size: 100px;
+    display: block;
+    margin: 0 0 1em 0;
+    width: 100%;
+}
+
+.skills-descr{
+  font-size: 14px;
+}
+
+.redux{
+  height: 100px;
+  width: 100px;
 }

@@ -4,7 +4,7 @@
 export const profile = {
   name: "Mauricio Uyaguari",
   role: "Software engineer",
-  location: "New York City",
+  location: "Queens, New York",
   photo: "/mauricio.webp",
   intro:
     "I turn complex data workflows into clear, usable products, mostly with React and TypeScript. I care about the whole journey: the UX, the code, and getting it deployed.",
@@ -92,7 +92,7 @@ export const education = [
 export const skills = ["React", "TypeScript", "JavaScript", "Java", "Node.js", "Python", "SQL"];
 
 export const offTheClock = [
-  { title: "Running", text: "Long runs and the occasional race. Always training for the next one." },
+  { title: "Running", text: "10 marathons finished and counting. Always training for the next one." },
   { title: "Jima, Ecuador", text: "Family roots at the foot of the Huinara. Fluent in Spanish." },
   { title: "History books", text: "Always taking recommendations. Send them my way." },
 ];

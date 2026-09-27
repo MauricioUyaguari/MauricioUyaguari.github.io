@@ -109,6 +109,8 @@ const en = {
   htmlLang: "en",
   switchTo: { label: "ES", title: "Ver en español" },
   role: "Software Engineer",
+  // Kept identical to the LinkedIn headline; no internal details on the site.
+  employer: "Vice President, Software Engineering at Goldman Sachs",
   location: "Queens, New York",
   intro:
     "I turn complex data workflows into clear, usable products, mostly with React and TypeScript. I care about the whole journey: the UX, the code, and getting it deployed.",
@@ -174,6 +176,7 @@ const es: Words = {
   htmlLang: "es",
   switchTo: { label: "EN", title: "View in English" },
   role: "Ingeniero de software",
+  employer: "Vicepresidente, Ingeniería de Software en Goldman Sachs",
   location: "Queens, Nueva York",
   intro:
     "Convierto flujos de datos complejos en productos claros y fáciles de usar, sobre todo con React y TypeScript. Me importa todo el recorrido: la experiencia de usuario, el código y ponerlo en producción.",

@@ -77,6 +77,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               <p className="mt-2 text-lg text-muted">
                 {t.role} · {t.location}
               </p>
+              <p className="mt-1 text-sm text-muted">{t.employer}</p>
             </div>
             <p className="text-lg leading-relaxed">{t.intro}</p>
             <div className="flex flex-wrap gap-2">

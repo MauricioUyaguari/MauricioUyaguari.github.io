@@ -10,10 +10,12 @@ export type Link = { label: string; href: string };
 export const SITE_NAME = "Mauricio Uyaguari";
 export const PHOTO = "/mauricio.webp";
 
+export const EMAIL = "lmauricio12@gmail.com";
+
 export const socials = {
   github: "https://github.com/MauricioUyaguari",
   linkedin: "https://www.linkedin.com/in/luismauriciouyaguari/",
-  email: "mailto:lmauricio12@gmail.com",
+  email: `mailto:${EMAIL}`,
   source: "https://github.com/MauricioUyaguari/MauricioUyaguari.github.io",
 };
 
@@ -106,11 +108,19 @@ const skills = ["React", "TypeScript", "JavaScript", "Java", "Node.js", "Python"
 const en = {
   htmlLang: "en",
   switchTo: { label: "ES", title: "Ver en español" },
-  role: "Software engineer",
+  role: "Software Engineer",
+  // Kept identical to the LinkedIn headline; no internal details on the site.
+  employer: "Vice President, Software Engineering at Goldman Sachs",
   location: "Queens, New York",
   intro:
     "I turn complex data workflows into clear, usable products, mostly with React and TypeScript. I care about the whole journey: the UX, the code, and getting it deployed.",
   buttons: { github: "GitHub", linkedin: "LinkedIn", email: "Email" },
+  resume: {
+    label: "Resume on request",
+    title: "Opens an email to request my resume",
+    subject: "Resume request",
+    body: "Hi Mauricio,\n\nI came across your website and would like to request a copy of your resume.\n\nThanks,\n",
+  },
   nav: { now: "Now", projects: "Projects", running: "Running", about: "About" },
   sections: {
     now: "Now",
@@ -166,10 +176,17 @@ const es: Words = {
   htmlLang: "es",
   switchTo: { label: "EN", title: "View in English" },
   role: "Ingeniero de software",
+  employer: "Vicepresidente, Ingeniería de Software en Goldman Sachs",
   location: "Queens, Nueva York",
   intro:
     "Convierto flujos de datos complejos en productos claros y fáciles de usar, sobre todo con React y TypeScript. Me importa todo el recorrido: la experiencia de usuario, el código y ponerlo en producción.",
   buttons: { github: "GitHub", linkedin: "LinkedIn", email: "Correo" },
+  resume: {
+    label: "CV a pedido",
+    title: "Abre un correo para pedir mi CV",
+    subject: "Solicitud de CV",
+    body: "Hola Mauricio,\n\nVi tu sitio web y me gustaría pedirte una copia de tu CV.\n\nGracias,\n",
+  },
   nav: { now: "Ahora", projects: "Proyectos", running: "Maratones", about: "Sobre mí" },
   sections: {
     now: "Ahora",

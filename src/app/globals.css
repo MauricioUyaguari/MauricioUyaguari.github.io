@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c1917;
+  --muted: #6b6560;
+  --faint: #f5f3ef;
+  --border: #e7e3dc;
+  --primary: #034ea2;
+  --accent: #ffd100;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121110;
+    --foreground: #f5f5f4;
+    --muted: #a8a29e;
+    --faint: #1c1a18;
+    --border: #2e2a26;
+    --primary: #6ea8f5;
+    --accent: #ffd100;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.eyebrow {
+  @apply mb-4 text-xs font-medium tracking-[0.12em] text-muted uppercase;
+}
+
+.card {
+  @apply rounded-xl border border-border p-4;
+}
+
+.tag {
+  @apply rounded-full bg-faint px-2.5 py-0.5 text-xs text-muted;
+}

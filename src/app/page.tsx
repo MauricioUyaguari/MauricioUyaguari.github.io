@@ -178,7 +178,10 @@ export default function Home() {
 
       <footer className="flex items-center justify-between border-t border-border py-6 text-xs text-muted">
         <span>Built with Next.js · Deployed on Vercel</span>
-        <HuinaraMini className="h-4 w-14" />
+        <span className="flex items-center gap-2">
+          <HuinaraMini className="h-5 w-auto" />
+          Jima, Ecuador
+        </span>
       </footer>
     </div>
   );

@@ -1,10 +1,10 @@
 // The Huinara, the hill above Jima, Azuay, with its cross: a small signature.
 export function HuinaraMini({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 60 18" className={className} role="img" aria-label="The Huinara, Jima, Ecuador">
-      <path d="M0 18 L0 11 L10 7 L22 3 L32 3 L46 18 Z" fill="#639922" />
-      <rect x="28" y="0" width="1" height="4" fill="currentColor" />
-      <rect x="26.5" y="1" width="4" height="1" fill="currentColor" />
+    <svg viewBox="0 0 46 20" className={className} aria-hidden="true">
+      <path d="M0 20 L0 13 L10 9 L22 5 L32 5 L46 20 Z" fill="#639922" />
+      <rect x="27.5" y="0" width="1.2" height="5" fill="currentColor" />
+      <rect x="25.6" y="1.4" width="5" height="1.2" fill="currentColor" />
     </svg>
   );
 }

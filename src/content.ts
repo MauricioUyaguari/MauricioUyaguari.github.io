@@ -158,7 +158,7 @@ const en = {
     { year: "2016", degree: "B.S. Electrical Engineering (Honors) and Mathematics", school: "Trinity College" },
   ],
   offTheClock: [
-    { title: "Travel", text: "New countries, new people. Barcelona and Medellín doubled as marathon trips." },
+    { title: "Travel", text: "New countries, new people. The best trips double as marathons, like Barcelona." },
     { title: "Jima, Ecuador", text: "Family roots at the foot of the Huinara. Fluent in Spanish." },
     { title: "History books", text: "Always taking recommendations. Send them my way." },
   ],
@@ -224,7 +224,7 @@ const es: Words = {
     { year: "2016", degree: "Ingeniería Eléctrica (con honores) y Matemáticas", school: "Trinity College" },
   ],
   offTheClock: [
-    { title: "Viajar", text: "Nuevos países, gente nueva. Barcelona y Medellín también fueron viajes de maratón." },
+    { title: "Viajar", text: "Nuevos países, gente nueva. Los mejores viajes también son maratones, como Barcelona." },
     { title: "Jima, Ecuador", text: "Mis raíces familiares, a los pies del Huinara." },
     { title: "Libros de historia", text: "Siempre acepto recomendaciones. ¡Mándenmelas!" },
   ],

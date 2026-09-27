@@ -1,99 +1,214 @@
-// Everything the site says lives here, so updating the site is mostly
-// editing this file.
+// Everything the site says lives here, in English and Spanish, so updating
+// the site is mostly editing this file. Shared facts (links, years, tags)
+// are defined once; only the words are translated.
 
-export const profile = {
-  name: "Mauricio Uyaguari",
-  role: "Software engineer",
-  location: "Queens, New York",
-  photo: "/mauricio.webp",
-  intro:
-    "I turn complex data workflows into clear, usable products, mostly with React and TypeScript. I care about the whole journey: the UX, the code, and getting it deployed.",
-  links: {
-    github: "https://github.com/MauricioUyaguari",
-    linkedin: "https://www.linkedin.com/in/luismauriciouyaguari/",
-    email: "mailto:lmauricio12@gmail.com",
-    source: "https://github.com/MauricioUyaguari/MauricioUyaguari.github.io",
-  },
-};
+export type Locale = "en" | "es";
+export const localePath: Record<Locale, string> = { en: "/", es: "/es" };
 
 export type Link = { label: string; href: string };
 
-export const now = {
-  title: "Legend",
-  subtitle: "Open-source data platform · FINOS",
-  description:
-    "I'm a maintainer of Legend Studio, a browser-based tool for modeling, querying and exploring data. I helped open-source it through FINOS and still work on its React/TypeScript codebase.",
-  tags: ["TypeScript", "React", "Open source"],
-  links: [
-    { label: "legend-studio on GitHub", href: "https://github.com/finos/legend-studio" },
-    { label: "Legend docs", href: "https://legend.finos.org" },
-    { label: "Tech talk: open-sourcing a monolith", href: "https://www.youtube.com/watch?v=tvJYOTmk53o" },
-  ] satisfies Link[],
-  recognition: "FINOS Newcomer of the Year (2021)",
+export const SITE_NAME = "Mauricio Uyaguari";
+export const PHOTO = "/mauricio.webp";
+
+export const socials = {
+  github: "https://github.com/MauricioUyaguari",
+  linkedin: "https://www.linkedin.com/in/luismauriciouyaguari/",
+  email: "mailto:lmauricio12@gmail.com",
+  source: "https://github.com/MauricioUyaguari/MauricioUyaguari.github.io",
 };
 
-export type Project = {
+// Marathons for the running section, newest first. The section is hidden
+// while this list is empty.
+export type Race = { name: string; city: string; year: number; time?: string };
+export const races: Race[] = [];
+
+const LEGEND_LINKS = {
+  github: "https://github.com/finos/legend-studio",
+  docs: "https://legend.finos.org",
+  talk: "https://www.youtube.com/watch?v=tvJYOTmk53o",
+};
+
+type Project = {
   name: string;
   year: string;
-  description: string;
   tags: string[];
-  links: Link[];
+  links: { href: string; label: Record<Locale, string> }[];
+  description: Record<Locale, string>;
   isNew?: boolean;
 };
 
-export const projects: Project[] = [
+const projects: Project[] = [
   {
     name: "Chuchaqui",
     year: "2026",
-    description:
-      "Bill splitting for family parties, in Spanish and English. Built for my family in Ecuador, and the grown-up successor to SplitIt.",
     tags: ["Next.js", "Turso", "Vercel"],
-    links: [{ label: "Live", href: "https://chuchaqui.vercel.app" }],
+    links: [{ href: "https://chuchaqui.vercel.app", label: { en: "Live", es: "Ver en vivo" } }],
     isNew: true,
+    description: {
+      en: "Bill splitting for family parties, in Spanish and English. Built for my family in Ecuador, and the grown-up successor to SplitIt.",
+      es: "Para dividir los gastos de las fiestas familiares, en español e inglés. Hecha para mi familia en Ecuador: la versión adulta de SplitIt.",
+    },
   },
   {
     name: "SplitIt",
     year: "2018",
-    description:
-      "The original: a single-page app for sharing bills with friends. Rails and PostgreSQL on the backend, React and Redux on the frontend.",
     tags: ["Rails", "PostgreSQL", "React"],
-    links: [{ label: "GitHub", href: "https://github.com/MauricioUyaguari/SplitIt" }],
+    links: [{ href: "https://github.com/MauricioUyaguari/SplitIt", label: { en: "GitHub", es: "GitHub" } }],
+    description: {
+      en: "The original: a single-page app for sharing bills with friends. Rails and PostgreSQL on the backend, React and Redux on the frontend.",
+      es: "La original: una app de una sola página para dividir cuentas con amigos. Rails y PostgreSQL en el backend, React y Redux en el frontend.",
+    },
   },
   {
     name: "BitData",
     year: "2018",
-    description: "Bitcoin price trends alongside the day's news, visualized with d3.",
     tags: ["d3", "JavaScript"],
-    links: [{ label: "GitHub", href: "https://github.com/MauricioUyaguari/BitData" }],
+    links: [{ href: "https://github.com/MauricioUyaguari/BitData", label: { en: "GitHub", es: "GitHub" } }],
+    description: {
+      en: "Bitcoin price trends alongside the day's news, visualized with d3.",
+      es: "Tendencias del precio de bitcoin junto a las noticias del día, visualizadas con d3.",
+    },
   },
   {
     name: "Eye gaze tracking",
     year: "2016",
-    description:
-      "A hands-free way to use a computer for people with limited hand mobility, using gaze tracking through image processing. College honors project.",
     tags: ["MATLAB", "Image processing"],
-    links: [{ label: "Report (PDF)", href: "/eye-gaze-tracking-report.pdf" }],
+    links: [
+      { href: "/eye-gaze-tracking-report.pdf", label: { en: "Report (PDF)", es: "Informe (PDF)" } },
+    ],
+    description: {
+      en: "A hands-free way to use a computer for people with limited hand mobility, using gaze tracking through image processing. College honors project.",
+      es: "Una forma de usar la computadora sin las manos, para personas con movilidad limitada, siguiendo la mirada con procesamiento de imágenes. Proyecto de honores de la universidad.",
+    },
   },
 ];
 
-export const moreProjects = {
-  text: "Also: DataTree, which turns SQL tables into Ruby classes with SQL-like methods.",
-  link: { label: "More on GitHub", href: "https://github.com/MauricioUyaguari" },
+const skills = ["React", "TypeScript", "JavaScript", "Java", "Node.js", "Python", "SQL"];
+
+const en = {
+  htmlLang: "en",
+  switchTo: { label: "ES", title: "Ver en español" },
+  role: "Software engineer",
+  location: "Queens, New York",
+  intro:
+    "I turn complex data workflows into clear, usable products, mostly with React and TypeScript. I care about the whole journey: the UX, the code, and getting it deployed.",
+  buttons: { github: "GitHub", linkedin: "LinkedIn", email: "Email" },
+  nav: { now: "Now", projects: "Projects", running: "Running", about: "About" },
+  sections: {
+    now: "Now",
+    projects: "Projects",
+    running: "Running",
+    about: "Education and skills",
+    offTheClock: "Off the clock",
+  },
+  now: {
+    title: "Legend",
+    subtitle: "Open-source data platform · FINOS",
+    description:
+      "I'm a maintainer of Legend Studio, a browser-based tool for modeling, querying and exploring data. I helped open-source it through FINOS and still work on its React/TypeScript codebase.",
+    tags: ["TypeScript", "React", "Open source"],
+    links: [
+      { label: "legend-studio on GitHub", href: LEGEND_LINKS.github },
+      { label: "Legend docs", href: LEGEND_LINKS.docs },
+      { label: "Tech talk: open-sourcing a monolith", href: LEGEND_LINKS.talk },
+    ] as Link[],
+    recognition: "FINOS Newcomer of the Year (2021)",
+  },
+  newBadge: "New",
+  moreProjects: {
+    text: "Also: DataTree, which turns SQL tables into Ruby classes with SQL-like methods.",
+    link: { label: "More on GitHub", href: socials.github } as Link,
+  },
+  running: {
+    summary: (count: number) => `${count} marathons finished and counting.`,
+  },
+  education: [
+    { year: "2022", degree: "M.S. Computer Science", school: "Georgia Tech" },
+    { year: "2016", degree: "B.S. Electrical Engineering (Honors) and Mathematics", school: "Trinity College" },
+  ],
+  offTheClock: [
+    { title: "Running", text: "10 marathons finished and counting. Always training for the next one." },
+    { title: "Jima, Ecuador", text: "Family roots at the foot of the Huinara. Fluent in Spanish." },
+    { title: "History books", text: "Always taking recommendations. Send them my way." },
+  ],
+  footer: { source: "Source", place: "Jima, Ecuador" },
+  notFound: {
+    title: "This page went for a long run.",
+    text: "It hasn't come back yet. Probably somewhere past mile 20.",
+    home: "Back to the homepage",
+  },
 };
 
-export const education = [
-  { year: "2022", degree: "M.S. Computer Science", school: "Georgia Tech" },
-  {
-    year: "2016",
-    degree: "B.S. Electrical Engineering (Honors) and Mathematics",
-    school: "Trinity College",
+type Words = typeof en;
+
+const es: Words = {
+  htmlLang: "es",
+  switchTo: { label: "EN", title: "View in English" },
+  role: "Ingeniero de software",
+  location: "Queens, Nueva York",
+  intro:
+    "Convierto flujos de datos complejos en productos claros y fáciles de usar, sobre todo con React y TypeScript. Me importa todo el recorrido: la experiencia de usuario, el código y ponerlo en producción.",
+  buttons: { github: "GitHub", linkedin: "LinkedIn", email: "Correo" },
+  nav: { now: "Ahora", projects: "Proyectos", running: "Maratones", about: "Sobre mí" },
+  sections: {
+    now: "Ahora",
+    projects: "Proyectos",
+    running: "Maratones",
+    about: "Educación y habilidades",
+    offTheClock: "Fuera del trabajo",
   },
-];
+  now: {
+    title: "Legend",
+    subtitle: "Plataforma de datos de código abierto · FINOS",
+    description:
+      "Soy mantenedor de Legend Studio, una herramienta en el navegador para modelar, consultar y explorar datos. Ayudé a publicarla como código abierto a través de FINOS y sigo trabajando en su código React/TypeScript.",
+    tags: ["TypeScript", "React", "Código abierto"],
+    links: [
+      { label: "legend-studio en GitHub", href: LEGEND_LINKS.github },
+      { label: "Documentación de Legend", href: LEGEND_LINKS.docs },
+      { label: "Charla técnica (en inglés)", href: LEGEND_LINKS.talk },
+    ],
+    recognition: "FINOS Newcomer of the Year (2021)",
+  },
+  newBadge: "Nuevo",
+  moreProjects: {
+    text: "También: DataTree, que convierte tablas SQL en clases de Ruby con métodos al estilo SQL.",
+    link: { label: "Más en GitHub", href: socials.github },
+  },
+  running: {
+    summary: (count: number) => `${count} maratones terminados y contando.`,
+  },
+  education: [
+    { year: "2022", degree: "Maestría en Ciencias de la Computación", school: "Georgia Tech" },
+    { year: "2016", degree: "Ingeniería Eléctrica (con honores) y Matemáticas", school: "Trinity College" },
+  ],
+  offTheClock: [
+    { title: "Correr", text: "10 maratones terminados y contando. Siempre entrenando para el próximo." },
+    { title: "Jima, Ecuador", text: "Mis raíces familiares, a los pies del Huinara." },
+    { title: "Libros de historia", text: "Siempre acepto recomendaciones. ¡Mándenmelas!" },
+  ],
+  footer: { source: "Código", place: "Jima, Ecuador" },
+  notFound: {
+    title: "Esta página salió a correr un maratón.",
+    text: "Todavía no regresa. Debe andar por el kilómetro 35.",
+    home: "Volver al inicio",
+  },
+};
 
-export const skills = ["React", "TypeScript", "JavaScript", "Java", "Node.js", "Python", "SQL"];
+export type Content = Words & {
+  projects: (Omit<Project, "description" | "links"> & { description: string; links: Link[] })[];
+  skills: string[];
+};
 
-export const offTheClock = [
-  { title: "Running", text: "10 marathons finished and counting. Always training for the next one." },
-  { title: "Jima, Ecuador", text: "Family roots at the foot of the Huinara. Fluent in Spanish." },
-  { title: "History books", text: "Always taking recommendations. Send them my way." },
-];
+export function getContent(locale: Locale): Content {
+  const words = locale === "es" ? es : en;
+  return {
+    ...words,
+    projects: projects.map((p) => ({
+      ...p,
+      description: p.description[locale],
+      links: p.links.map((l) => ({ href: l.href, label: l.label[locale] })),
+    })),
+    skills,
+  };
+}

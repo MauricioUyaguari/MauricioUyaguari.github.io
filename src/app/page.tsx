@@ -11,6 +11,9 @@ import {
   type Link,
 } from "@/content";
 
+// Set at build time; every deploy refreshes it.
+const YEAR = new Date().getFullYear();
+
 function ExternalLink({ link }: { link: Link }) {
   const isExternal = link.href.startsWith("http");
   return (
@@ -177,7 +180,17 @@ export default function Home() {
       </main>
 
       <footer className="flex items-center justify-between border-t border-border py-6 text-xs text-muted">
-        <span>Built with Next.js · Deployed on Vercel</span>
+        <span>
+          © {YEAR} {profile.name} ·{" "}
+          <a
+            href={profile.links.source}
+            target="_blank"
+            rel="noreferrer"
+            className="underline-offset-4 hover:text-foreground hover:underline"
+          >
+            Source
+          </a>
+        </span>
         <span className="flex items-center gap-2">
           <HuinaraMini className="h-5 w-auto" />
           Jima, Ecuador

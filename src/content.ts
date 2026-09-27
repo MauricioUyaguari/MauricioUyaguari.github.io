@@ -12,6 +12,7 @@ export const profile = {
     github: "https://github.com/MauricioUyaguari",
     linkedin: "https://www.linkedin.com/in/luismauriciouyaguari/",
     email: "mailto:lmauricio12@gmail.com",
+    source: "https://github.com/MauricioUyaguari/MauricioUyaguari.github.io",
   },
 };
 

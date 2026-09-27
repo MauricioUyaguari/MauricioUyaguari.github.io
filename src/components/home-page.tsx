@@ -2,6 +2,7 @@ import Image from "next/image";
 import NextLink from "next/link";
 import { HuinaraMini } from "@/components/huinara-mini";
 import {
+  EMAIL,
   PHOTO,
   SITE_NAME,
   getContent,
@@ -40,6 +41,9 @@ function Section({ id, title, children }: { id: string; title: string; children:
 export function HomePage({ locale }: { locale: Locale }) {
   const t = getContent(locale);
   const otherLocale: Locale = locale === "en" ? "es" : "en";
+  const resumeRequestHref = `mailto:${EMAIL}?subject=${encodeURIComponent(
+    t.resume.subject,
+  )}&body=${encodeURIComponent(t.resume.body)}`;
 
   return (
     <div lang={t.htmlLang} className="mx-auto max-w-3xl px-5">
@@ -97,6 +101,13 @@ export function HomePage({ locale }: { locale: Locale }) {
                 className="rounded-lg border border-border px-4 py-2 text-sm font-medium hover:border-primary"
               >
                 {t.buttons.email}
+              </a>
+              <a
+                href={resumeRequestHref}
+                title={t.resume.title}
+                className="rounded-lg border border-dashed border-border px-4 py-2 text-sm font-medium text-muted hover:border-primary hover:text-foreground"
+              >
+                {t.resume.label} ✉
               </a>
             </div>
           </div>

@@ -18,9 +18,27 @@ export const socials = {
 };
 
 // Marathons for the running section, newest first. The section is hidden
-// while this list is empty.
-export type Race = { name: string; city: string; year: number; time?: string };
-export const races: Race[] = [];
+// while this list is empty. `placeEs` is only needed when the Spanish name differs.
+export type Race = {
+  name: string;
+  place: string;
+  placeEs?: string;
+  year: number;
+  time?: string;
+  highlight?: "won" | "pb";
+};
+export const races: Race[] = [
+  { name: "BMW Dallas Marathon", place: "Dallas, TX", year: 2024 },
+  { name: "Buffalo Marathon", place: "Buffalo, NY", year: 2024 },
+  { name: "TCS New York City Marathon", place: "New York, NY", placeEs: "Nueva York, NY", year: 2023 },
+  { name: "Zurich Marató Barcelona", place: "Barcelona, Spain", placeEs: "Barcelona, España", year: 2023 },
+  { name: "Life Time Miami Marathon", place: "Miami, FL", year: 2023 },
+  { name: "Amica Newport Marathon", place: "Newport, RI", year: 2022, time: "3:16", highlight: "pb" },
+  { name: "Maratón Medellín", place: "Medellín, Colombia", year: 2022 },
+  { name: "Millbrook Marathon", place: "Millbrook, NY", year: 2022, highlight: "won" },
+  { name: "Adirondack Marathon", place: "Schroon Lake, NY", year: 2021 },
+  { name: "Yonkers Marathon", place: "Yonkers, NY", year: 2019 },
+];
 
 const LEGEND_LINKS = {
   github: "https://github.com/finos/legend-studio",
@@ -120,14 +138,17 @@ const en = {
     link: { label: "More on GitHub", href: socials.github } as Link,
   },
   running: {
-    summary: (count: number) => `${count} marathons finished and counting.`,
+    summary: (count: number) =>
+      `${count} marathons across three countries, and counting. One win, and a 3:16 personal best.`,
+    won: "🏆 Winner",
+    pb: "Personal best",
   },
   education: [
     { year: "2022", degree: "M.S. Computer Science", school: "Georgia Tech" },
     { year: "2016", degree: "B.S. Electrical Engineering (Honors) and Mathematics", school: "Trinity College" },
   ],
   offTheClock: [
-    { title: "Running", text: "10 marathons finished and counting. Always training for the next one." },
+    { title: "Travel", text: "New countries, new people. Barcelona and Medellín doubled as marathon trips." },
     { title: "Jima, Ecuador", text: "Family roots at the foot of the Huinara. Fluent in Spanish." },
     { title: "History books", text: "Always taking recommendations. Send them my way." },
   ],
@@ -176,14 +197,17 @@ const es: Words = {
     link: { label: "Más en GitHub", href: socials.github },
   },
   running: {
-    summary: (count: number) => `${count} maratones terminados y contando.`,
+    summary: (count: number) =>
+      `${count} maratones en tres países, y contando. Una victoria y una mejor marca personal de 3:16.`,
+    won: "🏆 Ganador",
+    pb: "Mejor marca personal",
   },
   education: [
     { year: "2022", degree: "Maestría en Ciencias de la Computación", school: "Georgia Tech" },
     { year: "2016", degree: "Ingeniería Eléctrica (con honores) y Matemáticas", school: "Trinity College" },
   ],
   offTheClock: [
-    { title: "Correr", text: "10 maratones terminados y contando. Siempre entrenando para el próximo." },
+    { title: "Viajar", text: "Nuevos países, gente nueva. Barcelona y Medellín también fueron viajes de maratón." },
     { title: "Jima, Ecuador", text: "Mis raíces familiares, a los pies del Huinara." },
     { title: "Libros de historia", text: "Siempre acepto recomendaciones. ¡Mándenmelas!" },
   ],

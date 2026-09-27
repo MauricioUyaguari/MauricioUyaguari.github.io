@@ -169,17 +169,24 @@ export function HomePage({ locale }: { locale: Locale }) {
             <p className="mb-4 text-lg">{t.running.summary(races.length)}</p>
             <ol className="grid gap-2 sm:grid-cols-2">
               {races.map((r) => (
-                <li key={`${r.name}-${r.year}`} className="card flex items-center gap-3 py-3">
+                <li
+                  key={`${r.name}-${r.year}`}
+                  className={`card flex items-center gap-3 py-3 ${r.highlight ? "border-accent border-2" : ""}`}
+                >
                   <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-semibold text-stone-900">
-                    {String(r.year).slice(2)}
+                    {`'${String(r.year).slice(2)}`}
                   </span>
-                  <span className="flex-1">
+                  <span className="min-w-0 flex-1">
                     <span className="block font-medium">{r.name}</span>
                     <span className="text-sm text-muted">
-                      {r.city} · {r.year}
+                      {(locale === "es" && r.placeEs) || r.place} · {r.year}
                     </span>
+                    {r.highlight && (
+                      <span className="mt-1 block w-fit rounded-full bg-accent px-2 py-0.5 text-xs font-medium text-stone-900">
+                        {r.highlight === "won" ? t.running.won : `${t.running.pb} · ${r.time}`}
+                      </span>
+                    )}
                   </span>
-                  {r.time && <span className="font-mono text-sm text-muted">{r.time}</span>}
                 </li>
               ))}
             </ol>
